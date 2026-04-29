@@ -1,45 +1,88 @@
 /* ============================================
-   Static Pages — Shared Styles
+   Static Pages — Premium Dark Styles
    ============================================ */
 
 .static-page {
   min-height: calc(100vh - var(--navbar-height));
+  background: var(--surface-0);
 }
 
 .static-hero {
   background: var(--gradient-hero);
-  padding: var(--space-16) 0;
+  padding: var(--space-20) 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.static-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
+}
+.static-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(99,102,241,0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 .static-hero h1 {
+  font-family: var(--font-display);
   font-size: var(--font-size-4xl);
   font-weight: 800;
   color: var(--color-white);
   margin-bottom: var(--space-3);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -1px;
 }
 .static-hero p {
   font-size: var(--font-size-lg);
   color: var(--color-gray-400);
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .static-content {
-  padding: var(--space-12) 0 var(--space-16);
+  padding: var(--space-12) 0 var(--space-20);
   max-width: 800px;
 }
 
 .static-card {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  border-radius: var(--radius-xl);
   padding: var(--space-10);
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  position: relative;
+  overflow: hidden;
+}
+.static-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
 }
 
 .static-card h2 {
+  font-family: var(--font-display);
   font-size: var(--font-size-xl);
   font-weight: 700;
-  color: var(--color-gray-900);
+  color: var(--color-white);
   margin-top: var(--space-8);
   margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid rgba(99,102,241,0.12);
 }
 .static-card h2:first-child {
   margin-top: 0;
@@ -47,7 +90,7 @@
 
 .static-card p {
   font-size: var(--font-size-base);
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
   line-height: 1.8;
   margin-bottom: var(--space-4);
 }
@@ -61,35 +104,38 @@
   padding: var(--space-2) 0;
   padding-left: var(--space-6);
   position: relative;
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
   line-height: 1.7;
+  font-size: var(--font-size-sm);
 }
 .static-list li::before {
   content: '';
   position: absolute;
   left: 0;
   top: 14px;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--color-blue-500);
+  background: var(--color-indigo-400);
+  box-shadow: 0 0 6px var(--color-indigo-500);
 }
 
 ol.static-list { counter-reset: list-counter; }
 ol.static-list li::before {
   content: counter(list-counter);
   counter-increment: list-counter;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background: var(--gradient-primary);
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   top: 8px;
+  box-shadow: 0 0 12px rgba(99,102,241,0.4);
 }
 ol.static-list li { padding-left: var(--space-10); }
 
@@ -104,15 +150,16 @@ ol.static-list li { padding-left: var(--space-10); }
 }
 
 .faq-item {
-  background: var(--color-white);
+  background: var(--glass-bg);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-gray-200);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
   overflow: hidden;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-base);
 }
 .faq-item.open {
-  border-color: var(--color-blue-300);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.06);
+  border-color: rgba(99,102,241,0.35);
+  box-shadow: 0 0 0 1px rgba(99,102,241,0.1), var(--shadow-glow-indigo);
 }
 
 .faq-question {
@@ -123,40 +170,43 @@ ol.static-list li { padding-left: var(--space-10); }
   padding: var(--space-5) var(--space-6);
   font-size: var(--font-size-base);
   font-weight: 600;
-  color: var(--color-gray-800);
+  color: var(--color-gray-200);
   text-align: left;
   background: none;
   border: none;
   cursor: pointer;
   gap: var(--space-4);
+  font-family: var(--font-family);
+  transition: color var(--transition-fast);
 }
-.faq-question:hover { color: var(--color-blue-600); }
+.faq-question:hover { color: var(--color-indigo-300); }
+.faq-item.open .faq-question { color: var(--color-white); }
 
 .faq-chevron {
   transition: transform var(--transition-base);
   flex-shrink: 0;
-  color: var(--color-gray-400);
+  color: var(--color-gray-600);
 }
 .faq-item.open .faq-chevron {
   transform: rotate(180deg);
-  color: var(--color-blue-500);
+  color: var(--color-indigo-400);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-base), padding var(--transition-base);
+  transition: max-height var(--transition-slow), padding var(--transition-base);
   padding: 0 var(--space-6);
 }
 .faq-item.open .faq-answer {
-  max-height: 300px;
+  max-height: 400px;
   padding: 0 var(--space-6) var(--space-5);
 }
 
 .faq-answer p {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-500);
-  line-height: 1.7;
+  color: var(--color-gray-400);
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {

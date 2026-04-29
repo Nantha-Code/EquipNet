@@ -1,5 +1,5 @@
 /* ============================================
-   EquipNet India — Global Styles
+   EquipNet India — Global Styles v2 (Premium Dark Mode)
    ============================================ */
 @import './variables.css';
 
@@ -20,8 +20,8 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
   line-height: 1.6;
-  color: var(--color-gray-800);
-  background: var(--color-gray-50);
+  color: var(--color-gray-200);
+  background: var(--surface-0);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-blue-500);
+  color: var(--color-indigo-400);
 }
 
 img {
@@ -61,7 +61,8 @@ input, select, textarea {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 700;
-  color: var(--color-gray-900);
+  color: var(--color-white);
+  font-family: var(--font-display);
 }
 
 /* ── Utility Classes ── */
@@ -72,14 +73,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-  padding: var(--space-20) 0;
+  padding: var(--space-24) 0;
 }
 
 .section-title {
+  font-family: var(--font-display);
   font-size: var(--font-size-3xl);
   font-weight: 800;
   margin-bottom: var(--space-2);
-  background: var(--gradient-primary);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -87,12 +89,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-subtitle {
   font-size: var(--font-size-lg);
-  color: var(--color-gray-500);
+  color: var(--color-gray-400);
   max-width: 600px;
+  line-height: 1.7;
 }
 
 .text-gradient {
-  background: var(--gradient-primary);
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,62 +131,97 @@ h1, h2, h3, h4, h5, h6 {
 .mb-6 { margin-bottom: var(--space-6); }
 .mb-8 { margin-bottom: var(--space-8); }
 
-/* ── Scrollbar ── */
+/* ── Premium Scrollbar ── */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-100);
+  background: var(--surface-1);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gray-300);
+  background: linear-gradient(180deg, var(--color-indigo-600), var(--color-violet-600));
   border-radius: var(--radius-full);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gray-400);
+  background: linear-gradient(180deg, var(--color-indigo-500), var(--color-violet-500));
 }
 
 /* ── Page Transition ── */
 .page-enter {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(16px);
 }
 .page-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity var(--transition-base), transform var(--transition-base);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
 }
 
-/* ── Toast / Notification ── */
+/* ── Premium Toast / Notification ── */
 .toast {
   position: fixed;
   top: var(--space-6);
   right: var(--space-6);
   padding: var(--space-4) var(--space-6);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   color: var(--color-white);
   font-weight: 500;
+  font-size: var(--font-size-sm);
   z-index: 9999;
-  animation: slideIn 0.3s ease;
+  animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: var(--shadow-xl);
+  min-width: 280px;
 }
-.toast-success { background: var(--color-green-500); }
-.toast-error { background: var(--color-red-500); }
-.toast-info { background: var(--color-blue-500); }
+.toast-success {
+  background: rgba(22,163,74,0.9);
+  border-color: rgba(74,222,128,0.3);
+}
+.toast-error {
+  background: rgba(220,38,38,0.9);
+  border-color: rgba(248,113,113,0.3);
+}
+.toast-info {
+  background: rgba(99,102,241,0.9);
+  border-color: rgba(165,180,252,0.3);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
 
 @keyframes slideIn {
   from { transform: translateX(100%); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 }
 
+/* ── Ambient Glow Background Utility ── */
+.bg-glow {
+  position: relative;
+}
+.bg-glow::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 /* ── Responsive Breakpoints ── */
 @media (max-width: 1024px) {
   .container { padding: 0 var(--space-4); }
-  .section { padding: var(--space-12) 0; }
+  .section { padding: var(--space-16) 0; }
 }
 @media (max-width: 768px) {
   .section-title { font-size: var(--font-size-2xl); }
-  .section { padding: var(--space-10) 0; }
+  .section { padding: var(--space-12) 0; }
 }
 @media (max-width: 480px) {
   .container { padding: 0 var(--space-3); }

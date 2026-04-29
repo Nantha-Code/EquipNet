@@ -1,5 +1,8 @@
+/* ── Premium Equipment Details Page ── */
 .equipment-details-page {
-  padding: var(--space-8) 0 var(--space-16);
+  padding: var(--space-8) 0 var(--space-20);
+  background: var(--surface-0);
+  min-height: calc(100vh - var(--navbar-height));
 }
 
 .eqd-layout {
@@ -12,15 +15,26 @@
 .eqd-image-wrapper {
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-indigo);
   aspect-ratio: 4/3;
-  background: var(--color-gray-100);
+  background: var(--surface-2);
+  border: 1px solid var(--glass-border);
+  position: relative;
+}
+.eqd-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(7,9,26,0.6));
+  z-index: 1;
+  pointer-events: none;
 }
 
 .eqd-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.9) saturate(1.1);
 }
 
 .eqd-image-placeholder {
@@ -29,8 +43,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-gray-100), var(--color-gray-200));
-  color: var(--color-gray-400);
+  background: linear-gradient(135deg, var(--surface-2), var(--surface-3));
+  color: var(--color-gray-600);
 }
 
 .eqd-top {
@@ -41,11 +55,13 @@
 }
 
 .eqd-title {
+  font-family: var(--font-display);
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  color: var(--color-gray-900);
+  color: var(--color-white);
   margin-bottom: var(--space-4);
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .eqd-meta {
@@ -57,40 +73,50 @@
 .eqd-meta-item {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
   font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
+  padding: var(--space-2) 0;
 }
 .eqd-meta-item svg {
-  color: var(--color-blue-500);
+  color: var(--color-indigo-400);
+  flex-shrink: 0;
 }
 
 .eqd-section-title {
+  font-family: var(--font-display);
   font-size: var(--font-size-lg);
   font-weight: 700;
-  color: var(--color-gray-800);
+  color: var(--color-white);
   margin-bottom: var(--space-3);
 }
 
 .eqd-description {
   font-size: var(--font-size-base);
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
   line-height: 1.8;
 }
 
 .eqd-specs {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 0;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
 .eqd-spec-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--color-gray-100);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid rgba(99,102,241,0.08);
+  transition: background var(--transition-fast);
 }
+.eqd-spec-row:last-child { border-bottom: none; }
+.eqd-spec-row:hover { background: rgba(99,102,241,0.05); }
 
 .eqd-spec-label {
   font-size: var(--font-size-sm);
@@ -100,12 +126,15 @@
 
 .eqd-spec-value {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-800);
+  color: var(--color-white);
   font-weight: 600;
 }
 
 .eqd-actions {
   margin-top: var(--space-8);
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1024px) {

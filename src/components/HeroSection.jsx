@@ -14,6 +14,7 @@ export default function HeroSection() {
         <div className="hero-bg-orb hero-bg-orb-1" />
         <div className="hero-bg-orb hero-bg-orb-2" />
         <div className="hero-bg-orb hero-bg-orb-3" />
+        <div className="hero-bg-orb hero-bg-orb-4" />
         <div className="hero-grid-pattern" />
       </div>
 
@@ -105,15 +106,22 @@ export default function HeroSection() {
             <svg viewBox="0 0 400 400" className="hero-svg">
               <defs>
                 <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#1a56db" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.1" />
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.25" />
+                  <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.08" />
                 </linearGradient>
+                <radialGradient id="heroCenter" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#6366f1" stopOpacity="0.2" />
+                  <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+                </radialGradient>
               </defs>
-              <circle cx="200" cy="200" r="180" fill="url(#heroGrad)" />
-              <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(26,86,219,0.15)" strokeWidth="1" strokeDasharray="8 6" className="hero-svg-rotate" />
-              <circle cx="200" cy="200" r="80" fill="none" stroke="rgba(6,182,212,0.2)" strokeWidth="1" strokeDasharray="4 8" className="hero-svg-rotate-rev" />
-              <text x="200" y="190" textAnchor="middle" fill="rgba(255,255,255,0.9)" fontSize="48" fontWeight="800">🇮🇳</text>
-              <text x="200" y="230" textAnchor="middle" fill="rgba(255,255,255,0.6)" fontSize="14" fontWeight="500">EquipNet India</text>
+              <circle cx="200" cy="200" r="185" fill="url(#heroGrad)" />
+              <circle cx="200" cy="200" r="140" fill="url(#heroCenter)" />
+              <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(99,102,241,0.2)" strokeWidth="1" strokeDasharray="8 6" className="hero-svg-rotate" />
+              <circle cx="200" cy="200" r="95" fill="none" stroke="rgba(139,92,246,0.25)" strokeWidth="1" strokeDasharray="4 8" className="hero-svg-rotate-rev" />
+              <circle cx="200" cy="200" r="50" fill="none" stroke="rgba(6,182,212,0.2)" strokeWidth="1" strokeDasharray="3 5" className="hero-svg-rotate" />
+              <text x="200" y="192" textAnchor="middle" fill="rgba(255,255,255,0.95)" fontSize="52" fontWeight="800">🇮🇳</text>
+              <text x="200" y="228" textAnchor="middle" fill="rgba(165,180,252,0.7)" fontSize="13" fontWeight="600" letterSpacing="1">EquipNet India</text>
             </svg>
           </div>
         </motion.div>

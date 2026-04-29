@@ -1,9 +1,38 @@
 /* ============================================
-   EquipNet India — Design System Variables
+   EquipNet India — Premium Design System v2
    ============================================ */
 
 :root {
-  /* ── Primary Palette ── */
+  /* ── Core Brand Palette ── */
+  --color-brand-950: #030712;
+  --color-brand-900: #0a0f1e;
+  --color-brand-800: #0d1529;
+  --color-brand-700: #111d38;
+  --color-brand-600: #172447;
+  --color-brand-500: #1e2d5a;
+
+  /* ── Indigo / Blue ── */
+  --color-indigo-700: #3730a3;
+  --color-indigo-600: #4338ca;
+  --color-indigo-500: #6366f1;
+  --color-indigo-400: #818cf8;
+  --color-indigo-300: #a5b4fc;
+  --color-indigo-200: #c7d2fe;
+
+  /* ── Violet ── */
+  --color-violet-600: #7c3aed;
+  --color-violet-500: #8b5cf6;
+  --color-violet-400: #a78bfa;
+
+  /* ── Cyan / Teal ── */
+  --color-cyan-600: #0891b2;
+  --color-cyan-500: #06b6d4;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-300: #67e8f9;
+  --color-teal-500: #14b8a6;
+  --color-teal-400: #2dd4bf;
+
+  /* ── Legacy Blue (kept for compatibility) ── */
   --color-navy-900: #0a1628;
   --color-navy-800: #0f1f3d;
   --color-navy-700: #162a50;
@@ -12,20 +41,23 @@
   --color-blue-500: #2563eb;
   --color-blue-400: #3b82f6;
   --color-blue-300: #60a5fa;
-  --color-cyan-500: #06b6d4;
-  --color-cyan-400: #22d3ee;
-  --color-cyan-300: #67e8f9;
+  --color-cyan-400-legacy: #22d3ee;
+  --color-cyan-300-legacy: #67e8f9;
 
-  /* ── Accent & Semantic ── */
+  /* ── Semantic ── */
+  --color-green-600: #16a34a;
   --color-green-500: #22c55e;
   --color-green-400: #4ade80;
+  --color-green-300: #86efac;
   --color-amber-500: #f59e0b;
   --color-amber-400: #fbbf24;
+  --color-red-600: #dc2626;
   --color-red-500: #ef4444;
   --color-red-400: #f87171;
+  --color-purple-600: #9333ea;
   --color-purple-500: #8b5cf6;
 
-  /* ── Neutrals ── */
+  /* ── Neutrals (dark-first) ── */
   --color-white: #ffffff;
   --color-gray-50: #f8fafc;
   --color-gray-100: #f1f5f9;
@@ -37,22 +69,42 @@
   --color-gray-700: #334155;
   --color-gray-800: #1e293b;
   --color-gray-900: #0f172a;
+  --color-gray-950: #020617;
 
-  /* ── Gradients ── */
-  --gradient-primary: linear-gradient(135deg, #1a56db 0%, #06b6d4 100%);
-  --gradient-hero: linear-gradient(135deg, #0a1628 0%, #162a50 40%, #1a56db 100%);
-  --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-  --gradient-dark: linear-gradient(180deg, #0a1628 0%, #0f1f3d 100%);
+  /* ── Surface Colors ── */
+  --surface-0: #07091a;
+  --surface-1: #0c0e24;
+  --surface-2: #111530;
+  --surface-3: #181d3d;
+  --surface-4: #1e2548;
+  --surface-glass: rgba(16, 18, 42, 0.6);
+  --surface-glass-light: rgba(255, 255, 255, 0.04);
+  --surface-glass-border: rgba(99, 102, 241, 0.2);
+
+  /* ── Premium Gradients ── */
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  --gradient-primary-alt: linear-gradient(135deg, #4338ca 0%, #7c3aed 100%);
+  --gradient-accent: linear-gradient(135deg, #22d3ee 0%, #818cf8 100%);
+  --gradient-hero: linear-gradient(135deg, #07091a 0%, #0c0e24 40%, #111530 100%);
+  --gradient-card: linear-gradient(135deg, rgba(99,102,241,0.08) 0%, rgba(139,92,246,0.04) 100%);
+  --gradient-dark: linear-gradient(180deg, #07091a 0%, #0c0e24 100%);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(99,102,241,0.3) 0%, transparent 70%);
+  --gradient-shine: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.06) 50%, transparent 60%);
+  --gradient-text: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #22d3ee 100%);
+  --gradient-cta: linear-gradient(135deg, #6366f1 0%, #8b5cf6 60%, #14b8a6 100%);
 
   /* ── Glassmorphism ── */
-  --glass-bg: rgba(255, 255, 255, 0.08);
-  --glass-bg-light: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-border-light: rgba(255, 255, 255, 0.3);
-  --glass-blur: blur(16px);
-  --glass-blur-heavy: blur(24px);
+  --glass-bg: rgba(16, 18, 42, 0.5);
+  --glass-bg-elevated: rgba(24, 29, 61, 0.7);
+  --glass-bg-light: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(99, 102, 241, 0.18);
+  --glass-border-bright: rgba(129, 140, 248, 0.35);
+  --glass-border-light: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(20px);
+  --glass-blur-heavy: blur(40px);
 
   /* ── Typography ── */
+  --font-display: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -64,6 +116,7 @@
   --font-size-4xl: 2.25rem;
   --font-size-5xl: 3rem;
   --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
 
   /* ── Spacing ── */
   --space-1: 0.25rem;
@@ -81,27 +134,34 @@
 
   /* ── Border Radius ── */
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-xl: 24px;
+  --radius-2xl: 32px;
   --radius-full: 9999px;
 
-  /* ── Shadows ── */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
-  --shadow-lg: 0 8px 30px rgba(0,0,0,0.2);
-  --shadow-xl: 0 20px 60px rgba(0,0,0,0.3);
-  --shadow-glow-blue: 0 0 30px rgba(26,86,219,0.3);
-  --shadow-glow-cyan: 0 0 30px rgba(6,182,212,0.3);
+  /* ── Premium Shadows ── */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4), 0 2px 6px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.6), 0 8px 24px rgba(0,0,0,0.4);
+  --shadow-card: 0 0 0 1px rgba(99,102,241,0.12), 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-card-hover: 0 0 0 1px rgba(99,102,241,0.35), 0 16px 48px rgba(99,102,241,0.15), 0 8px 24px rgba(0,0,0,0.5);
+  --shadow-glow-indigo: 0 0 40px rgba(99,102,241,0.35), 0 0 80px rgba(99,102,241,0.15);
+  --shadow-glow-violet: 0 0 40px rgba(139,92,246,0.3), 0 0 80px rgba(139,92,246,0.1);
+  --shadow-glow-cyan: 0 0 40px rgba(6,182,212,0.25);
+  --shadow-btn: 0 4px 20px rgba(99,102,241,0.4), 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-btn-hover: 0 8px 32px rgba(99,102,241,0.5), 0 4px 16px rgba(0,0,0,0.4);
 
   /* ── Transitions ── */
   --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: 600ms cubic-bezier(0.22, 1, 0.36, 1);
 
   /* ── Layout ── */
   --max-width: 1280px;
   --navbar-height: 72px;
-  --sidebar-width: 280px;
+  --sidebar-width: 300px;
 }

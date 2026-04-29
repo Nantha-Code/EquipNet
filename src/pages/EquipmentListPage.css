@@ -1,15 +1,22 @@
+/* ── Premium Equipment List Page ── */
 .equipment-list-page {
-  padding: var(--space-8) 0 var(--space-16);
+  padding: var(--space-8) 0 var(--space-20);
+  background: var(--surface-0);
+  min-height: calc(100vh - var(--navbar-height));
 }
 
 .eql-header {
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid rgba(99,102,241,0.1);
 }
 
 .eql-title {
+  font-family: var(--font-display);
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  color: var(--color-gray-900);
+  color: var(--color-white);
+  letter-spacing: -0.5px;
 }
 
 .eql-subtitle {
@@ -20,7 +27,7 @@
 
 .eql-search {
   margin-bottom: var(--space-8);
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .eql-content {
@@ -34,10 +41,25 @@
   min-width: 0;
 }
 
+.eql-results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.eql-results-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+.eql-results-count strong {
+  color: var(--color-indigo-400);
+}
+
 .eql-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-6);
+  gap: var(--space-5);
 }
 
 @media (max-width: 1024px) {

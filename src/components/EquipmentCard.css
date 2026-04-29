@@ -1,3 +1,4 @@
+/* ── Premium Equipment Card ── */
 .equipment-card {
   display: flex;
   flex-direction: column;
@@ -5,25 +6,61 @@
   color: inherit;
   cursor: pointer;
   overflow: hidden;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  transition: all var(--transition-base);
+  position: relative;
+}
+.equipment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-base);
 }
 .equipment-card:hover {
   color: inherit;
+  border-color: var(--glass-border-bright);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-6px);
 }
+.equipment-card:hover::before { opacity: 1; }
 
+/* ── Image ── */
 .equipment-card-image {
   position: relative;
   height: 200px;
   overflow: hidden;
-  background: var(--color-gray-100);
+  background: var(--surface-2);
 }
 .equipment-card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
+  filter: brightness(0.85) saturate(1.1);
 }
 .equipment-card:hover .equipment-card-image img {
-  transform: scale(1.08);
+  transform: scale(1.1);
+  filter: brightness(0.95) saturate(1.2);
+}
+
+/* Image overlay gradient */
+.equipment-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(13,15,38,0.8), transparent);
+  pointer-events: none;
 }
 
 .equipment-card-placeholder {
@@ -32,16 +69,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-gray-100), var(--color-gray-200));
-  color: var(--color-gray-400);
+  background: linear-gradient(135deg, var(--surface-2), var(--surface-3));
+  color: var(--color-gray-600);
 }
 
 .equipment-card-badge {
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
+  z-index: 2;
 }
 
+/* ── Body ── */
 .equipment-card-body {
   padding: var(--space-5);
   display: flex;
@@ -52,18 +91,24 @@
 .equipment-card-type {
   align-self: flex-start;
   margin-bottom: var(--space-3);
+  font-size: 10px;
 }
 
 .equipment-card-title {
+  font-family: var(--font-display);
   font-size: var(--font-size-base);
   font-weight: 700;
-  color: var(--color-gray-800);
+  color: var(--color-white);
   margin-bottom: var(--space-2);
-  line-height: 1.3;
+  line-height: 1.35;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: color var(--transition-fast);
+}
+.equipment-card:hover .equipment-card-title {
+  color: var(--color-indigo-300);
 }
 
 .equipment-card-institution {
@@ -78,7 +123,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: var(--space-3);
-  border-top: 1px solid var(--color-gray-100);
+  border-top: 1px solid rgba(99,102,241,0.1);
 }
 
 .equipment-card-location {
@@ -95,9 +140,10 @@
   gap: var(--space-1);
   font-size: var(--font-size-xs);
   font-weight: 600;
-  color: var(--color-blue-500);
-  transition: gap var(--transition-fast);
+  color: var(--color-indigo-400);
+  transition: all var(--transition-fast);
 }
 .equipment-card:hover .equipment-card-arrow {
   gap: var(--space-2);
+  color: var(--color-indigo-300);
 }

@@ -49,8 +49,8 @@ export default function HomePage() {
               { step: '03', title: 'Request', desc: 'Submit an access request with your research details', icon: '📋' },
               { step: '04', title: 'Access', desc: 'Get approved and use the equipment for your research', icon: '🔬' }
             ].map((item, i) => (
-              <div key={i} className="step-card glass-card">
-                <div className="step-number">{item.step}</div>
+              <div key={i} className="step-card">
+                <div className="step-number-wrapper">{item.step}</div>
                 <div className="step-icon">{item.icon}</div>
                 <h3 className="step-title">{item.title}</h3>
                 <p className="step-desc">{item.desc}</p>

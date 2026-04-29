@@ -1,13 +1,25 @@
+/* ── Premium Filter Sidebar ── */
 .filter-sidebar {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-gray-200);
+  background: var(--glass-bg);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
   padding: var(--space-6);
   width: var(--sidebar-width);
   flex-shrink: 0;
   height: fit-content;
   position: sticky;
   top: calc(var(--navbar-height) + var(--space-6));
+  overflow: hidden;
+}
+.filter-sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
 }
 
 .filter-header {
@@ -21,9 +33,13 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  font-family: var(--font-display);
   font-size: var(--font-size-base);
   font-weight: 700;
-  color: var(--color-gray-800);
+  color: var(--color-white);
+}
+.filter-title svg {
+  color: var(--color-indigo-400);
 }
 
 .filter-clear-btn {
@@ -31,17 +47,19 @@
   align-items: center;
   gap: var(--space-1);
   font-size: var(--font-size-xs);
-  color: var(--color-red-500);
-  background: none;
-  border: none;
+  color: var(--color-red-400);
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.15);
   cursor: pointer;
-  font-weight: 500;
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-fast);
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  font-family: var(--font-family);
 }
 .filter-clear-btn:hover {
-  background: rgba(239,68,68,0.06);
+  background: rgba(239,68,68,0.15);
+  border-color: rgba(239,68,68,0.3);
 }
 
 .filter-group {
@@ -51,55 +69,61 @@
 .filter-label {
   display: block;
   font-size: var(--font-size-xs);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-gray-500);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: var(--space-2);
+  letter-spacing: 1px;
+  margin-bottom: var(--space-3);
 }
 
 .filter-radio-group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 
 .filter-radio {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3);
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
-  color: var(--color-gray-600);
+  color: var(--color-gray-400);
   cursor: pointer;
   transition: all var(--transition-fast);
+  border: 1px solid transparent;
 }
 .filter-radio input {
   display: none;
 }
 .filter-radio:hover {
-  background: var(--color-gray-50);
+  background: rgba(99,102,241,0.08);
+  color: var(--color-gray-200);
 }
 .filter-radio.active {
-  background: rgba(37,99,235,0.06);
-  color: var(--color-blue-600);
-  font-weight: 500;
+  background: rgba(99,102,241,0.12);
+  color: var(--color-indigo-300);
+  font-weight: 600;
+  border-color: rgba(99,102,241,0.2);
 }
 
 .filter-radio-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--color-gray-300);
+  background: var(--color-gray-600);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
 }
 .filter-radio.active .filter-radio-dot {
-  background: var(--color-blue-500);
+  background: var(--color-indigo-400);
+  box-shadow: 0 0 8px var(--color-indigo-500);
 }
 
-.badge-dot-available { background: var(--color-green-500) !important; }
-.badge-dot-booked { background: var(--color-amber-500) !important; }
-.badge-dot-maintenance { background: var(--color-red-500) !important; }
+.badge-dot-available { background: var(--color-green-500) !important; box-shadow: 0 0 6px var(--color-green-500) !important; }
+.badge-dot-booked { background: var(--color-amber-400) !important; box-shadow: 0 0 6px var(--color-amber-400) !important; }
+.badge-dot-maintenance { background: var(--color-red-400) !important; box-shadow: 0 0 6px var(--color-red-400) !important; }
 
 @media (max-width: 1024px) {
   .filter-sidebar {

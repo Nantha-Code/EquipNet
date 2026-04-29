@@ -1,3 +1,4 @@
+/* ── Premium Loader ── */
 .loader {
   display: flex;
   flex-direction: column;
@@ -25,15 +26,15 @@
 }
 
 .loader-ring:nth-child(1) {
-  border-top-color: var(--color-blue-500);
+  border-top-color: var(--color-indigo-500);
   animation-delay: -0.45s;
 }
 .loader-ring:nth-child(2) {
-  border-top-color: var(--color-cyan-500);
+  border-top-color: var(--color-violet-500);
   animation-delay: -0.3s;
 }
 .loader-ring:nth-child(3) {
-  border-top-color: var(--color-blue-300);
+  border-top-color: var(--color-cyan-500);
   animation-delay: -0.15s;
 }
 
@@ -44,6 +45,7 @@
 
 .loader-text {
   font-size: var(--font-size-sm);
-  color: var(--color-gray-400);
+  color: var(--color-gray-500);
   font-weight: 500;
+  letter-spacing: 0.3px;
 }

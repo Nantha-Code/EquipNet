@@ -1,11 +1,6 @@
-.register-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-}
+/* RegisterPage shares LoginPage.css */
+/* Additional register-specific overrides */
 
-@media (max-width: 640px) {
-  .register-row {
-    grid-template-columns: 1fr;
-  }
+#register-page .auth-container {
+  max-width: 520px;
 }
