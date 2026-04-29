@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Arun Sharma",
+    "email": "admin@equipnet.in",
+    "password": "admin123",
+    "role": "Admin",
+    "institution": "Ministry of Science & Technology"
+  },
+  {
+    "id": 2,
+    "name": "Priya Menon",
+    "email": "priya@iitb.ac.in",
+    "password": "student123",
+    "role": "Student",
+    "institution": "IIT Bombay"
+  },
+  {
+    "id": 3,
+    "name": "NanoTech Solutions Pvt Ltd",
+    "email": "contact@nanotechsol.in",
+    "password": "startup123",
+    "role": "Startup",
+    "institution": "NanoTech Solutions"
+  },
+  {
+    "id": 4,
+    "name": "Prof. Ramesh Kumar",
+    "email": "ramesh@iisc.ac.in",
+    "password": "inst123",
+    "role": "Institution",
+    "institution": "Indian Institute of Science"
+  }
+]

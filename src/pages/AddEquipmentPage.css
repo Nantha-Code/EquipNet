@@ -1,0 +1,31 @@
+.add-equipment-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+.add-eq-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-10);
+}
+.add-eq-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+.add-eq-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-8);
+}
+.add-eq-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.add-eq-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+@media (max-width: 640px) {
+  .add-eq-row { grid-template-columns: 1fr; }
+}

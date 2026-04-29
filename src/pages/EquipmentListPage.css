@@ -1,0 +1,53 @@
+.equipment-list-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.eql-header {
+  margin-bottom: var(--space-6);
+}
+
+.eql-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-gray-900);
+}
+
+.eql-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-500);
+  margin-top: var(--space-1);
+}
+
+.eql-search {
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+}
+
+.eql-content {
+  display: flex;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.eql-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.eql-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .eql-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .eql-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "name": "Scanning Electron Microscope (SEM)",
+    "description": "A high-resolution scanning electron microscope capable of imaging surfaces at nanometer scale. Ideal for materials science, biology, and nanotechnology research. Features include EDS detector for elemental analysis and variable pressure mode for non-conductive samples.",
+    "institution": "Indian Institute of Technology, Bombay",
+    "location": "Mumbai",
+    "availabilityStatus": "Available",
+    "usageType": "Microscopy",
+    "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 2,
+    "name": "Nuclear Magnetic Resonance Spectrometer (NMR)",
+    "description": "500 MHz NMR spectrometer for structural determination of organic and inorganic compounds. Supports 1H, 13C, and multinuclear experiments. Essential for pharmaceutical research, chemistry, and biochemistry applications.",
+    "institution": "Indian Institute of Science, Bangalore",
+    "location": "Bangalore",
+    "availabilityStatus": "Booked",
+    "usageType": "Spectroscopy",
+    "image": "https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Real-Time PCR System",
+    "description": "Advanced quantitative PCR system with 96-well capacity for gene expression analysis, SNP genotyping, and pathogen detection. Features fluorescence detection with FAM, VIC, ROX, and Cy5 channels.",
+    "institution": "All India Institute of Medical Sciences",
+    "location": "New Delhi",
+    "availabilityStatus": "Available",
+    "usageType": "PCR",
+    "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "X-Ray Diffractometer (XRD)",
+    "description": "Powder X-ray diffraction system for phase identification, crystal structure determination, and quantitative phase analysis. Cu Kα radiation source with high-speed detector for rapid data collection.",
+    "institution": "Indian Institute of Technology, Madras",
+    "location": "Chennai",
+    "availabilityStatus": "Available",
+    "usageType": "Diffraction",
+    "image": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "High-Performance Liquid Chromatography (HPLC)",
+    "description": "Ultra-high performance liquid chromatography system with UV-Vis and fluorescence detectors. Ideal for pharmaceutical analysis, environmental testing, and food safety applications. Automated sample injection.",
+    "institution": "National Chemical Laboratory",
+    "location": "Pune",
+    "availabilityStatus": "Maintenance",
+    "usageType": "Chromatography",
+    "image": "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Transmission Electron Microscope (TEM)",
+    "description": "200 kV field-emission TEM with STEM mode, EDS, and EELS capabilities. Resolution down to 0.1 nm for atomic-scale imaging. Cryo-TEM module available for biological specimen analysis.",
+    "institution": "Jawaharlal Nehru Centre for Advanced Scientific Research",
+    "location": "Bangalore",
+    "availabilityStatus": "Available",
+    "usageType": "Microscopy",
+    "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 7,
+    "name": "Mass Spectrometer (LC-MS/MS)",
+    "description": "Triple quadrupole liquid chromatography-mass spectrometry system for quantitative analysis of small molecules. Applications in proteomics, metabolomics, pharmacokinetics, and clinical research.",
+    "institution": "Indian Institute of Technology, Delhi",
+    "location": "New Delhi",
+    "availabilityStatus": "Booked",
+    "usageType": "Spectroscopy",
+    "image": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Atomic Force Microscope (AFM)",
+    "description": "Multi-mode atomic force microscope for surface topography, mechanical properties, and electrical characterization at nanoscale. Operates in contact, tapping, and non-contact modes.",
+    "institution": "Tata Institute of Fundamental Research",
+    "location": "Mumbai",
+    "availabilityStatus": "Available",
+    "usageType": "Microscopy",
+    "image": "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 9,
+    "name": "Flow Cytometer",
+    "description": "Multi-parameter flow cytometry system with 4-laser configuration and 18-color capability. Applications in immunophenotyping, cell cycle analysis, apoptosis detection, and cell sorting.",
+    "institution": "National Institute of Immunology",
+    "location": "New Delhi",
+    "availabilityStatus": "Available",
+    "usageType": "Biology",
+    "image": "https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 10,
+    "name": "Confocal Laser Scanning Microscope",
+    "description": "Point-scanning confocal microscope with multiple laser lines for fluorescence imaging of biological specimens. Z-stack capability for 3D reconstruction. Live cell imaging compatible.",
+    "institution": "Indian Institute of Technology, Kanpur",
+    "location": "Kanpur",
+    "availabilityStatus": "Booked",
+    "usageType": "Microscopy",
+    "image": "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 11,
+    "name": "Fourier Transform Infrared Spectrometer (FTIR)",
+    "description": "FTIR spectrometer with ATR accessory for rapid, non-destructive analysis of solids, liquids, and gases. Applications in polymer science, pharmaceutical QC, and environmental monitoring.",
+    "institution": "Central Drug Research Institute",
+    "location": "Lucknow",
+    "availabilityStatus": "Available",
+    "usageType": "Spectroscopy",
+    "image": "https://images.unsplash.com/photo-1564325724739-bae0bd08762c?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 12,
+    "name": "Ultracentrifuge",
+    "description": "Preparative ultracentrifuge with maximum speed of 100,000 RPM. Suitable for protein purification, virus isolation, subcellular fractionation, and gradient separations.",
+    "institution": "Centre for Cellular and Molecular Biology",
+    "location": "Hyderabad",
+    "availabilityStatus": "Available",
+    "usageType": "Biology",
+    "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 13,
+    "name": "3D Metal Printer (DMLS)",
+    "description": "Direct Metal Laser Sintering system for additive manufacturing of complex metal parts. Supports stainless steel, titanium, aluminum, and Inconel alloys. Build volume: 250×250×325 mm.",
+    "institution": "Indian Institute of Technology, Kharagpur",
+    "location": "Kharagpur",
+    "availabilityStatus": "Available",
+    "usageType": "Manufacturing",
+    "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 14,
+    "name": "Thermal Analysis System (DSC/TGA)",
+    "description": "Simultaneous DSC/TGA system for thermal characterization of materials. Temperature range: -150°C to 1600°C. Applications in polymer, ceramic, and pharmaceutical research.",
+    "institution": "National Physical Laboratory",
+    "location": "New Delhi",
+    "availabilityStatus": "Maintenance",
+    "usageType": "Thermal Analysis",
+    "image": "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 15,
+    "name": "Raman Spectrometer",
+    "description": "Confocal Raman microscope with multiple excitation wavelengths (532, 633, 785 nm). Applications in material characterization, pharmaceutical analysis, and forensic science. Mapping capability included.",
+    "institution": "Indian Association for the Cultivation of Science",
+    "location": "Kolkata",
+    "availabilityStatus": "Available",
+    "usageType": "Spectroscopy",
+    "image": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 16,
+    "name": "Gene Sequencer (Next-Gen)",
+    "description": "Next-generation DNA sequencing platform with high throughput capability. Supports whole genome sequencing, exome sequencing, RNA-seq, and metagenomics applications. Output up to 6 Tb per run.",
+    "institution": "Institute of Genomics and Integrative Biology",
+    "location": "New Delhi",
+    "availabilityStatus": "Available",
+    "usageType": "Genomics",
+    "image": "https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 17,
+    "name": "Electron Beam Lithography System",
+    "description": "High-resolution e-beam lithography system for nanoscale patterning. Resolution below 10 nm. Essential for semiconductor research, MEMS fabrication, and photonic device manufacturing.",
+    "institution": "Indian Institute of Technology, Bombay",
+    "location": "Mumbai",
+    "availabilityStatus": "Booked",
+    "usageType": "Nanofabrication",
+    "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 18,
+    "name": "Inductively Coupled Plasma (ICP-OES)",
+    "description": "ICP optical emission spectrometer for multi-element analysis of liquids and dissolved solids. Detection limits in ppb range. Applications in environmental, geological, and materials analysis.",
+    "institution": "National Geophysical Research Institute",
+    "location": "Hyderabad",
+    "availabilityStatus": "Available",
+    "usageType": "Spectroscopy",
+    "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 19,
+    "name": "Wind Tunnel (Subsonic)",
+    "description": "Closed-circuit subsonic wind tunnel with test section 1.2m × 0.9m. Speed range: 10-80 m/s. Force balance, PIV, and pressure measurement systems available. Ideal for aerospace and automotive research.",
+    "institution": "Indian Institute of Science, Bangalore",
+    "location": "Bangalore",
+    "availabilityStatus": "Available",
+    "usageType": "Aerospace",
+    "image": "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&h=400&fit=crop"
+  },
+  {
+    "id": 20,
+    "name": "Cryogenic Measurement System (PPMS)",
+    "description": "Physical Property Measurement System for characterization of electronic, magnetic, and thermal properties of materials from 1.9K to 400K. Includes resistivity, heat capacity, and vibrating sample magnetometry options.",
+    "institution": "Inter-University Accelerator Centre",
+    "location": "New Delhi",
+    "availabilityStatus": "Available",
+    "usageType": "Physics",
+    "image": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b7?w=600&h=400&fit=crop"
+  }
+]

@@ -1,0 +1,63 @@
+.hscroll-section {
+  padding: var(--space-16) 0;
+}
+
+.hscroll-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+}
+
+.hscroll-controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.hscroll-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-gray-200);
+  background: var(--color-white);
+  color: var(--color-gray-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.hscroll-btn:hover {
+  border-color: var(--color-blue-500);
+  color: var(--color-blue-500);
+  background: rgba(37,99,235,0.04);
+}
+
+.hscroll-track {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: var(--space-2) 0 var(--space-4);
+}
+.hscroll-track::-webkit-scrollbar {
+  display: none;
+}
+
+.hscroll-inner {
+  display: flex;
+  gap: var(--space-6);
+  padding: 0 max(var(--space-6), calc((100vw - var(--max-width)) / 2 + var(--space-6)));
+}
+
+.hscroll-inner > * {
+  flex: 0 0 320px;
+  min-width: 320px;
+}
+
+@media (max-width: 768px) {
+  .hscroll-inner > * {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+  .hscroll-controls { display: none; }
+}

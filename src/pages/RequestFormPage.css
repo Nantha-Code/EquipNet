@@ -1,0 +1,102 @@
+.request-form-page {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+.request-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.request-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.request-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-8);
+}
+
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.request-dates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.request-summary-card {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-6));
+}
+
+.request-summary-image {
+  height: 200px;
+  overflow: hidden;
+  background: var(--color-gray-100);
+}
+.request-summary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.request-summary-body {
+  padding: var(--space-5);
+}
+.request-summary-body h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: var(--space-3) 0 var(--space-2);
+}
+.request-summary-body p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+.request-summary-location {
+  margin-top: var(--space-2);
+}
+
+.request-success {
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+.request-success-card {
+  max-width: 480px;
+  text-align: center;
+  padding: var(--space-12);
+}
+.request-success-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+}
+.request-success-card h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  margin-bottom: var(--space-4);
+}
+.request-success-card p {
+  color: var(--color-gray-500);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .request-layout { grid-template-columns: 1fr; }
+  .request-summary { order: -1; }
+}
+
+@media (max-width: 640px) {
+  .request-dates { grid-template-columns: 1fr; }
+}
