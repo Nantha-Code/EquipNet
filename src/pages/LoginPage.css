@@ -147,6 +147,32 @@
   padding-left: var(--space-12) !important;
 }
 
+/* Align the login fields and submit button to the same form width. */
+#login-page .auth-form .form-group,
+#login-page .auth-input-wrapper,
+#login-page .auth-input,
+#login-page #login-submit {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#login-page .auth-input,
+#login-page #login-submit {
+  height: 48px;
+}
+
+#login-page .auth-input {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#login-page #login-submit {
+  align-self: stretch;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .auth-footer {
   text-align: center;
   margin-top: var(--space-6);
