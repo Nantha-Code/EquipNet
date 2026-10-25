@@ -4,3 +4,33 @@
 #register-page .auth-container {
   max-width: 520px;
 }
+
+/* Keep every registration field in one aligned, full-width column. */
+#register-page .auth-form {
+  gap: var(--space-5);
+}
+
+#register-page .auth-form .form-group {
+  width: 100%;
+  gap: var(--space-2);
+}
+
+#register-page .register-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+#register-page .auth-input-wrapper,
+#register-page .auth-input,
+#register-page .form-select {
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+#register-page .auth-input {
+  padding-top: 0;
+  padding-bottom: 0;
+}
